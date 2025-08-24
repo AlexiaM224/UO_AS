@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Eliminando zona DNS..."
+rm -f /etc/bind/zones/db.reprobados.com
+sed -i '/reprobados.com/d' /etc/bind/named.conf.local
+systemctl restart bind9
+echo "DNS limpio y listo para nueva configuración."
