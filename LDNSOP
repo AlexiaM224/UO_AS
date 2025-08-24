@@ -1,0 +1,3 @@
+Write-Host "Eliminando zona DNS..."
+Remove-DnsServerZone -Name "reprobados.com" -Force
+Write-Host "Servicio DNS listo para nueva configuración."
